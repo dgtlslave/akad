@@ -1,0 +1,152 @@
+.ion-icon {
+	font-size: 36px;
+	line-height: 48px;
+	display: block;
+}
+
+.ak-breadcrumbs {
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		display: inline-block;
+		font: 700 14px/48px 'Montserrat', sans-serif;
+		text-transform: uppercase;
+
+		&:not(:first-child):before {
+			content: '/';
+			display: inline-block;
+			padding: 0 6px 0 4px;
+		}
+	}
+}
+
+.ak-styled-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 30px 0;
+
+	&--multi-columns {
+		column-count: 2;
+	}
+
+	&__item {
+		position: relative;
+		line-height: 30px;
+		padding-left: 20px;
+
+		&:before {
+			content: '';
+			height: 12px;
+			width: 12px;
+			display: block;
+			position: absolute;
+			background: url(../img/icon-bullet.jpg) 50% no-repeat;
+			left: 0;
+			top: 9px;
+		}
+	}
+}
+
+.ak-logo {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 18px;
+	transition: color ease $transition;
+
+	&:hover {
+		text-decoration: none;
+		color: $color_green;
+	}
+}
+
+.ak-title-wrapper{
+	min-height: 190px;
+}
+
+.ak-title {
+	font-size: 30px;
+	line-height: 48px;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 16px;
+	display: inline-block;
+	text-transform: uppercase;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		background-color: $color_green;
+		top: 50%;
+		left: 0;
+		height: 21px;
+		width: 70px;
+		z-index: -1;
+	}
+}
+
+.ak-button {
+	display: inline-block;
+	background-color: $color_green;
+	border: 2px solid $color_green;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 46px;
+	height: 50px;
+	padding: 0 40px;
+	transition: ease $transition;
+	transition-property: color, background-color;
+
+	&:hover {
+		background-color: #fff;
+		color: $color_green;
+		text-decoration: none;
+	}
+
+	&--thin {
+		height: 30px;
+		line-height: 26px;
+	}
+}
+
+.ak-card {
+	padding: 30px;
+	border-top: 5px solid $color_green;
+	transition: box-shadow ease .3s;
+	position: relative;
+	margin: 30px 0;
+
+	&:hover {
+		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25);
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: 5px solid transparent;
+		border-top: 5px solid $color_green;
+		border-right: 5px solid $color_green;
+	}
+}
+
+.footer-nav {
+
+	&__list {
+		list-style: none;
+		padding-left: 0;
+
+	}
+
+	&__item {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 48px;
+		text-transform: uppercase;
+	}
+}
