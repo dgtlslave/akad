@@ -6,7 +6,7 @@
 	&--page {
 		min-height: 500px;
 		background: #fff url(../img/header-page.jpg) top center no-repeat;
-		background-size: cover;	
+		background-size: cover;
 	}
 
 	&__middle {
@@ -19,7 +19,7 @@
 
 	&__main {
 		padding-top: 125px;
-		padding-bottom: 125px;	
+		padding-bottom: 125px;
 	}
 
 	&__title {
@@ -27,8 +27,8 @@
 		font-weight: 700;
 
 		span {
-			background-color: $color_green;	
-			display: inline-block;		
+			background-color: $color_green;
+			display: inline-block;
 			font-size: 18px;
 			line-height: 30px;
 			height: 30px;
@@ -38,7 +38,7 @@
 
 		h1 {
 			border: 10px solid $color_main;
-			padding: 20px 15px;  
+			padding: 20px 15px;
 			margin-bottom: 30px;
 
 			@include media-breakpoint-up(lg) {
@@ -69,6 +69,44 @@
 			left: 0;
 			width: 100%;
 			height: auto;
+		}
+	}
+
+	&__menu {
+		z-index: 9999999;
+		position: relative;
+	}
+}
+
+.ak-menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: -340px;
+	width: 320px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 999999;
+	transition: transform ease-in .4s;
+
+	&--open {
+		transform: translateX(-340px);
+	}
+
+	&__items {
+		list-style: none;
+		padding-left: 0;
+
+
+		li {
+			text-transform: uppercase;
+
+			a {
+				line-height: 40px;
+				color: #fff;
+			}
 		}
 	}
 }

@@ -2,8 +2,10 @@
 
 // to inlude plugins add "=" sign below
 // require bootstrap.min.js
-// require slick.min.js 
+// require slick.min.js
 
+//=require popper.min.js
+//=require bootstrap.min.js
 //=require isotope.pkgd.min.js
 
 ;(function($){
@@ -29,6 +31,12 @@
   			$('.ak-portfolio__filter a').removeClass('active');
   			$(this).addClass('active');
 		});
+
+$('#mobile-menu-link').on('click', function(evt) {
+	evt.preventDefault();
+	$(this).toggleClass('open')
+	$('#mobile-menu').toggleClass('ak-menu--open');
+})
 
 	});
 
